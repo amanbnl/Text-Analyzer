@@ -22,7 +22,8 @@ export default function HomeComponent () {
     //setting character count
     setCountChars(event.target.value.trim().length)
     //setting word count
-    setCountWords((event.target.value.split(' ').filter(el => el.length!==0).length))
+    setCountWords((event.target.value.replace( /\n/g, " " ).split( " " ).filter(el => el.length!==0).length))
+
   }
   //handleUppercase will convert the text to upperCase when someone clicked on upperCase button.
   const handleUpperCase = () => {
