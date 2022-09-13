@@ -20,7 +20,7 @@ export default function HomeComponent () {
     //setting the state
     setText(event.target.value)
     //setting character count
-    setCountChars(event.target.value.length)
+    setCountChars(event.target.value.trim().length)
     //setting word count
     setCountWords((event.target.value.split(' ').filter(el => el.length!==0).length))
   }
